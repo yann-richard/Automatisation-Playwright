@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: Runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 25.434 sec <<< FAILURE!
+searchTestCase011-valid search(home #1)  Time elapsed: 7.363 sec  <<< ERROR!
+java.lang.NullPointerException
+	at step_definitions.homeStep.KeywordSearchWith(homeStep.java:35)
+	at ?.I do a search with "Ampoule"(file:///C:/Users/Pawk71/Desktop/Automatisation-Playwright/src/test/resources/features/home.feature:30)
+
+logTestCase11 - Logout(home #1)  Time elapsed: 6.793 sec  <<< ERROR!
+java.lang.NullPointerException
+	at step_definitions.homeStep.logoutapp(homeStep.java:52)
+	at ?.I clicks to the logout button(file:///C:/Users/Pawk71/Desktop/Automatisation-Playwright/src/test/resources/features/home.feature:48)
+
