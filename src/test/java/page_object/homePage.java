@@ -5,8 +5,13 @@ import io.qameta.allure.Allure;
 import page_object.loginPage;
 
 import java.nio.file.Paths;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 
 
 
@@ -90,7 +95,25 @@ public class homePage {
 public void saveScreen() {
     Allure.addAttachment("screenshot", new ByteArrayInputStream((page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("example.png"))))));
 }
+
+    public void takeScreenVideoCapture() {
+
+
+        byte[] byteArr = new byte[0];
+        try {
+            Path path = page.video().path();
+            // file to byte[], Path
+            byteArr = Files.readAllBytes(path);
+            Allure.addAttachment("Video", "video/mp4", new ByteArrayInputStream(byteArr), "mp4");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }
+
 
 
 

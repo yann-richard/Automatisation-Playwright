@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="Runners.TestRunner" time="24.458" errors="2" skipped="0">
+<testsuite tests="1" failures="0" name="Runners.TestRunner" time="0.001" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
     <property name="java.vm.version" value="25.171-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Pawk71\Desktop\Automatisation-Playwright"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Pawk71\Desktop\zenity task\PROJET_Playwright\Automatisation-Playwright"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Pawk71\Desktop\Automatisation-Playwright"/>
+    <property name="user.dir" value="C:\Users\Pawk71\Desktop\zenity task\PROJET_Playwright\Automatisation-Playwright"/>
     <property name="java.runtime.version" value="1.8.0_171-b11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed"/>
@@ -29,7 +29,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\apache-maven-3.8.4\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\android-sdk\tools;C:\android-sdk\platform-tools;C:\apache-maven-3.8.4\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Gradle\gradle-7.3.1-bin\gradle-7.3.1\bin;C:\allure-2.17.2\allure-2.17.2\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Users\Pawk71\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Pawk71\AppData\Local\Programs\Python\Python39\;C:\Users\Pawk71\AppData\Local\Microsoft\WindowsApps;C:\Users\Pawk71\AppData\Roaming\npm;C:\Users\Pawk71\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Pawk71\AppData\Local\Programs\Git\cmd;C:\Users\Pawk71\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2021.3\bin;;C:\android-sdk\tools;C:\android-sdk\platform-tools;C:\Program Files\Android\Android Studio\bin;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\android-sdk\tools;C:\android-sdk\platform-tools;C:\apache-maven-3.8.4\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Gradle\gradle-7.3.1-bin\gradle-7.3.1\bin;C:\allure-2.17.2\allure-2.17.2\bin;C:\Program Files\Java\jdk-16.0.2\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Users\Pawk71\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Pawk71\AppData\Local\Programs\Python\Python39\;C:\Users\Pawk71\AppData\Local\Microsoft\WindowsApps;C:\Users\Pawk71\AppData\Roaming\npm;C:\Users\Pawk71\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Pawk71\AppData\Local\Programs\Git\cmd;C:\Users\Pawk71\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2021.3\bin;;C:\android-sdk\tools;C:\android-sdk\platform-tools;C:\Program Files\Android\Android Studio\bin;;."/>
     <property name="maven.conf" value="C:\apache-maven-3.8.4/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -65,39 +65,78 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="home #1" name="loginTestCase011 - Login successfully" time="10.302"/>
-  <testcase classname="home #1" name="searchTestCase011-valid search" time="7.363">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at step_definitions.homeStep.KeywordSearchWith(homeStep.java:35)
-	at ✽.I do a search with &quot;Ampoule&quot;(file:///C:/Users/Pawk71/Desktop/Automatisation-Playwright/src/test/resources/features/home.feature:30)
+  <testcase classname="Runners.TestRunner" name="initializationError" time="0.001">
+    <error message="Failed to parse resource at: file:///C:/Users/Pawk71/Desktop/zenity%20task/PROJET_Playwright/Automatisation-Playwright/src/test/resources/features/End2End2.feature
+(62:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario Outline : Logout (case passing success)&apos;
+(63:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given I am connected to my account with &quot;&lt;email&gt;&quot; and &quot;&lt;password&gt;&quot;&apos;
+(64:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;And I clicks to the logout button&apos;
+(65:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then I&apos;m logout&apos;
+(66:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Examples:&apos;
+(67:7): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;|          email     |     password     |&apos;
+(68:7): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;|  tata2@test.com    |    12236987      |&apos;
+(78:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty" type="io.cucumber.core.gherkin.FeatureParserException">io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///C:/Users/Pawk71/Desktop/zenity%20task/PROJET_Playwright/Automatisation-Playwright/src/test/resources/features/End2End2.feature
+(62:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario Outline : Logout (case passing success)&apos;
+(63:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given I am connected to my account with &quot;&lt;email&gt;&quot; and &quot;&lt;password&gt;&quot;&apos;
+(64:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;And I clicks to the logout button&apos;
+(65:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then I&apos;m logout&apos;
+(66:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Examples:&apos;
+(67:7): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;|          email     |     password     |&apos;
+(68:7): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;|  tata2@test.com    |    12236987      |&apos;
+(78:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty
+	at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:53)
+	at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:45)
+	at java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
+	at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
+	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:75)
+	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:60)
+	at java.nio.file.Files.walkFileTree(Files.java:2670)
+	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:53)
+	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
+	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
+	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
+	at io.cucumber.junit.Cucumber.&lt;init&gt;(Cucumber.java:156)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:37)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+	at org.junit.internal.requests.ClassRequest.createRunner(ClassRequest.java:28)
+	at org.junit.internal.requests.MemoizingRequest.getRunner(MemoizingRequest.java:19)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:250)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
-    <system-out>
-@homeTestsCase @searchTestCase011
-Scenario Outline: searchTestCase011-valid search &amp;#27;[90m# src/test/resources/features/home.feature:35&amp;#27;[0m
-  &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI open Ztrain login page&amp;#27;[0m                 &amp;#27;[90m# step_definitions.loginStep.iOpenZtrainLoginPage()&amp;#27;[0m
-  &amp;#27;[31mWhen &amp;#27;[0m&amp;#27;[31mI do a search with &amp;#27;[0m&amp;#27;[31m&amp;#27;[1m&quot;Ampoule&quot;&amp;#27;[0m              &amp;#27;[90m# step_definitions.homeStep.KeywordSearchWith(java.lang.String)&amp;#27;[0m
-      &amp;#27;[31mjava.lang.NullPointerException
-	at step_definitions.homeStep.KeywordSearchWith(homeStep.java:35)
-	at âœ½.I do a search with &quot;Ampoule&quot;(file:///C:/Users/Pawk71/Desktop/Automatisation-Playwright/src/test/resources/features/home.feature:30)
-&amp;#27;[0m
-  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI see a result&amp;#27;[0m                            &amp;#27;[90m# step_definitions.homeStep.iSeeAMultipleKeywordSearchResultPage()&amp;#27;[0m
-</system-out>
-  </testcase>
-  <testcase classname="home #1" name="logTestCase11 - Logout" time="6.793">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at step_definitions.homeStep.logoutapp(homeStep.java:52)
-	at ✽.I clicks to the logout button(file:///C:/Users/Pawk71/Desktop/Automatisation-Playwright/src/test/resources/features/home.feature:48)
-</error>
-    <system-out>
-@homeTestsCase @logTestCase11
-Scenario: logTestCase11 - Logout    &amp;#27;[90m# src/test/resources/features/home.feature:47&amp;#27;[0m
-  &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI open Ztrain login page&amp;#27;[0m    &amp;#27;[90m# step_definitions.loginStep.iOpenZtrainLoginPage()&amp;#27;[0m
-  &amp;#27;[31mAnd &amp;#27;[0m&amp;#27;[31mI clicks to the logout button&amp;#27;[0m &amp;#27;[90m# step_definitions.homeStep.logoutapp()&amp;#27;[0m
-      &amp;#27;[31mjava.lang.NullPointerException
-	at step_definitions.homeStep.logoutapp(homeStep.java:52)
-	at âœ½.I clicks to the logout button(file:///C:/Users/Pawk71/Desktop/Automatisation-Playwright/src/test/resources/features/home.feature:48)
-&amp;#27;[0m
-  &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI&apos;m logout&amp;#27;[0m                   &amp;#27;[90m# step_definitions.homeStep.imlogout()&amp;#27;[0m
-</system-out>
+    <system-err>&amp;#27;[32m&amp;#27;[1m?????????????????????????????????????????????????????????????????????????????????????&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m Share your Cucumber Report with your team at &amp;#27;[36m&amp;#27;[1m&amp;#27;[4mhttps://reports.cucumber.io&amp;#27;[0m          &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m Activate publishing with one of the following:                                    &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m                                                                                   &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m src/test/resources/cucumber.properties:          &amp;#27;[36mcucumber.publish.enabled&amp;#27;[0m=&amp;#27;[36mtrue&amp;#27;[0m    &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m src/test/resources/junit-platform.properties:    &amp;#27;[36mcucumber.publish.enabled&amp;#27;[0m=&amp;#27;[36mtrue&amp;#27;[0m    &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m Environment variable:                            &amp;#27;[36mCUCUMBER_PUBLISH_ENABLED&amp;#27;[0m=&amp;#27;[36mtrue&amp;#27;[0m    &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m JUnit:                                           &amp;#27;[36m@CucumberOptions&amp;#27;[0m(publish = &amp;#27;[36mtrue&amp;#27;[0m) &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m                                                                                   &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m More information at &amp;#27;[36mhttps://cucumber.io/docs/cucumber/environment-variables/&amp;#27;[0m      &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m                                                                                   &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m Disable this message with one of the following:                                   &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m                                                                                   &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m src/test/resources/cucumber.properties:          &amp;#27;[36mcucumber.publish.quiet&amp;#27;[0m=&amp;#27;[36mtrue&amp;#27;[0m      &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m src/test/resources/junit-platform.properties:    &amp;#27;[36mcucumber.publish.quiet&amp;#27;[0m=&amp;#27;[36mtrue&amp;#27;[0m      &amp;#27;[32m&amp;#27;[1m?&amp;#27;[0m
+&amp;#27;[32m&amp;#27;[1m?????????????????????????????????????????????????????????????????????????????????????&amp;#27;[0m
+</system-err>
   </testcase>
 </testsuite>

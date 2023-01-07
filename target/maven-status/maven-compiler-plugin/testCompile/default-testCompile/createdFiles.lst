@@ -1,9 +1,13 @@
+page_object\productPage.class
 page_object\accountCreationPage.class
 step_definitions\loginStep.class
 page_object\homePage.class
 page_object\cartPage.class
 step_definitions\RegistrationStep.class
 page_object\loginPage.class
+modules\TestRunner.class
+Runners\BaseRunner.class
+step_definitions\productStep.class
 step_definitions\homeStep.class
 page_object\registrationPage.class
 Runners\TestRunner.class

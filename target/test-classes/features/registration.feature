@@ -1,26 +1,27 @@
-@Registration
+@RegistrationTestsCase
 Feature: User Registration Process Functionality
   As a visitor of the ecommerce website
   I want to create an account
 
 
-  @reg01
-  Scenario Outline: Registration
+  @RegistrationTestCase01
+  Scenario Outline: RegistrationTestCase01-Registration successfully
     Given i'm Ztrain login page
     When I click on register button
     And I fill in the form with the information "<Email>" "<Mot de passe>" "<Confirmer votre mot de passe>"
     And I clicks validation button
-    Then The user is connected "Z-Train"
+    Then after registration The user is connected, the "Z-Train" logo is observed
 
 
     Examples:
       |      Email     | Mot de passe |Confirmer votre mot de passe |
-      |test78@test.com  |   12236987   |         12236987           |
-      |test789@test.com  |   12236987   |         12236987          |
+      |test005@test.com  |   12236987   |         12236988          |
+#      |test789@test.com  |   12236987   |         12236988          |
+#      |test@test.com|   12345678   |        12345678            |
 
 
   @RegistrationTestCase02
-  Scenario Outline: Registration fail "Les deux mots de passe ne sont pas identiques"
+  Scenario Outline: RegistrationTestCase02-Registration failed "The two passwords are not identical"
     Given i'm Ztrain login page
     When I click on register button
     And I fill in the form with the information "<Email>" "<Mot de passe>" "<Confirmer votre mot de passe>"
@@ -30,10 +31,11 @@ Feature: User Registration Process Functionality
     Examples:
       |      Email| Mot de passe |Confirmer votre mot de passe|
       |te@test.com|   Ulr789     |          7855              |
+      |tet0@test.com|   12345678   |        12345678            |
 
 
-    @RegistrationTestCase02
-  Scenario Outline: Registration fail "Cet utilisateur existe déjà"
+    @RegistrationTestCase03
+  Scenario Outline: RegistrationTestCase03-Registration failed "This user already exists"
     Given i'm Ztrain login page
     When I click on register button
     And I fill in the form with the information "<Email>" "<Mot de passe>" "<Confirmer votre mot de passe>"
@@ -42,4 +44,5 @@ Feature: User Registration Process Functionality
 
     Examples:
       |      Email  | Mot de passe |Confirmer votre mot de passe|
-      |test@test.com|   12345678   |        12345678            |
+#      |tet@test.com|   12345678   |        12345678            |
+      |test@test.com|   12345678   |        12345672            |

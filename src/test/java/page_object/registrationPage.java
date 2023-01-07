@@ -1,6 +1,7 @@
 package page_object;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.TimeoutError;
 import io.qameta.allure.Allure;
 
 import java.io.ByteArrayInputStream;
@@ -44,12 +45,48 @@ public class registrationPage {
         page.fill(confirmPassword, passconf);}
     public void clickValidationButton() {
         page.click(validationButton);}
+
+
     public String getConfirmationLogin() {
-        return page.textContent(confirmationLogin);}
+        try {
+            return page.textContent(confirmationLogin);
+        } catch (TimeoutError e) {
+            System.out.println("Timeout !");
+            return ("Home page logo is not observed after registration step ");
+        }
+    }
+
+        /*  return page.textContent(LogoHomepageConfirmation);*/
+//        try { return page.textContent(LogoHomepageConfirmation);
+//
+//        } catch (TimeoutError e) {
+//            System.out.println("Timeout !");
+//            return page.textContent("e");
+//        }
+
+
+
     public String getFailedRegister() {
-        return page.textContent(failedRegister);}
+        try {
+            return page.textContent(failedRegister);
+        } catch (TimeoutError e) {
+            System.out.println("Timeout !");
+            return ("no presence of the error message 'The two passwords are not identical'");
+        }
+
+    }
+
+
     public String getFailedExisting() {
-        return page.textContent(failExisting);}
+        try {
+            return page.textContent(failExisting);
+        } catch (TimeoutError e) {
+            System.out.println("Timeout !");
+            return ("no presence of the error message 'This user already exists'");
+        }
+    }
+
+
     public void saveScreen() {
         Allure.addAttachment("screenshot",
                 new ByteArrayInputStream((page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("example.png"))))));

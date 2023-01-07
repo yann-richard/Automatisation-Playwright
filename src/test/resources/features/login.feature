@@ -11,38 +11,42 @@ Feature: Login
     When I'm in the login page
     And I enter email address "<email>" and password "<password>"
     And I clicks to the login button
-    Then The user is connected with  "Z-Train"
+    Then The user is connected, the "Z-Train" logo is observed
+
     Examples:
       |          email   |     password    |
       |  test@test.com   |   12345678      |
+#      |  tt@test.com     |   12345678      |
+#      |  tt@test.com     | invalid_password$  |
+      |     invalid_email|        12345678 |
 
 
   @loginTestCase02
-  Scenario Outline: loginTestCase02- Login failed
+  Scenario Outline: loginTestCase02- Login failed with the error message 'Incorrect email or password'
     When I'm in the login page
     And I enter email address "<email>" and password "<password>"
     And I clicks to the login button
     Then Access is denied with the message "Email ou mot de passe incorrect"
     Examples:
-      |          email      |     password   |
-      |  test@test.com      |   745$         |
+      |          email   |     password    |
+      |  tt@test.com     |   12345678      |
+#      |  tt@test.com     | invalid_password$ |
+#      |     invalid_email|        12345678 |
+      |  test@test.com   |   12345678      |
+
 
   @loginTestCase03
-  Scenario Outline: loginTestCase02 - Login fail mail
+  Scenario Outline: loginTestCase03 - Login failed with the error message 'The email format is invalid'
     When I'm in the login page
     And I enter email address "<email>" and password "<password>"
     And I clicks to the login button
     Then Access is denied with "Le format de l'email est invalid"
     Examples:
-      |          email      |     password    |
-      |         toto        |        12345678 |
+      |          email   |     password    |
+      |     invalid_email|        12345678 |
+      |  tt@test.com     |   12345678      |
+#      |  tt@test.com     |   invalid_password$|
+      |  test@test.com   |   12345678      |
 
-    @LogoutTestCase02
-  Scenario Outline: LogoutTestCase02 - Logout
-    When I enter email address "<email>" and password "<password>"
-    And I clicks to the logout button
-    Then I'm logout
-    Examples:
-      |          email      |     password    |
-      |  test@test.com      |   12345678      |
+
 

@@ -1,4 +1,4 @@
-@End
+
 Feature: End2End
   As a visitor of the ecommerce website
   - I want to create an account
@@ -16,12 +16,12 @@ Feature: End2End
     When I click on register button
     And I fill in the form with the information "<Email>" "<Mot de passe>" "<Confirmer votre mot de passe>"
     And I clicks validation button
-    Then The user is connected "Z-Train"
+    Then after registration The user is connected, the "Z-Train" logo is observed
 
 
     Examples:
       |      Email     | Mot de passe |Confirmer votre mot de passe |
-      |tata2@test.com   |   12236987   |         12236987           |
+      |tata289@test.com   |   12236987   |         12236987           |
 
   @End2End @End2EndSearchProduct @End2EndAddProduct
   Scenario Outline: Login (case passing success)
@@ -29,42 +29,49 @@ Feature: End2End
     When I'm in the login page
     And I enter email address "<email>" and password "<password>"
     And I clicks to the login button
-    Then The user is connected with  "Z-Train"
+    Then The user is connected, the "Z-Train" logo is observed
     Examples:
       |          email     |     password     |
-      |  tata2@test.com      |    12236987       |
+      |  tata289@test.com      |    12236987       |
 
   @End2EndSearchProduct @End2End
   Scenario Outline: valid search (case passing success)
       Given I am connected to my account with "<email>" and "<password>"
+      When I'm in the login page
       When I do a search with "<keyword>"
       Then I see a result
-#      Then I see a result "Ampoule Vecteur Incandescent"
     Examples:
       | keyword         |       email     |     password    |
-      |caque            | tata2@test.com    |    12236987      |
+      |caque            | tata289@test.com    |    12236987      |
 
 
-  @End2End @End2EndAddProduct
-  Scenario Outline: Add a product to my bag
+#  @End2End @End2EndAddProduct
+#  Scenario Outline: Add a product to my bag
 #    Given I am connected to my account "<email>" and "<password>"
-    Given I am connected to my account with "<email>" and "<password>"
-    And I added to my bag
-    Then I can see the message "Votre panier à été mis à jour"
-    Examples:
-      |          email      |     password    |
-      |  tata2@test.com        |    12236987      |
-
-
+#    And I added to my bag
+#    Then I can see the message "Votre panier à été mis à jour"
+#    Examples:
+#      |          email      |     password    |
+#      |  tata2@test.com        |    12236987      |
 
   @End2End @End2EndSearchProduct @End2EndAddProduct
-  Scenario Outline: Logout (case passing success)
-    Given I am connected to my account with "<email>" and "<password>"
+Scenario Outline: Logout (case passing success )
+    Given I open Ztrain login page
+    And I login into app with email address "<email>" and password "<password>"
     And I clicks to the logout button
     Then I'm logout
     Examples:
-      |          email     |     password     |
-      |  tata2@test.com    |    12236987      |
+      |          email      |     password    |
+      |  tata289@test.com      |   12345678      |
+#  @End2End @End2EndSearchProduct @End2EndAddProduct
+#  Scenario Outline : Logout (case passing success)
+#    Given I open Ztrain login page
+#    And I login into app with email address "<email>" and password "<password>"
+#    And I clicks to the logout button
+#    Then I'm logout
+#    Examples:
+#      |          email      |     password    |
+#      |  test@test.com      |   12345678      |
 
 
 

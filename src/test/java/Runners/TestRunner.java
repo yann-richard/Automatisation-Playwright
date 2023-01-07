@@ -13,8 +13,8 @@ package Runners;
 //        plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         features = {"src/test/resources/features/"},
         glue = { "step_definitions",},
-        tags = "@End2EndSearchProduct",
-        name = {""}
+        tags = "@End2EndSearchProduct"
+        /*name = {""}*/
 
 )
 

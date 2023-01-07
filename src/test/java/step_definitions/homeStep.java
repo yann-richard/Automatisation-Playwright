@@ -45,11 +45,12 @@ public class homeStep {
     @Then("I see a result")
     public void iSeeAMultipleKeywordSearchResultPage() {
         home.saveScreen();
-        Assert.assertTrue(home.ResultSearch());
+        Assert.assertTrue("An Error has occurred while searching",home.ResultSearch());
+      /*  Assert.assertTrue("Erreur au niveau du résultat de la recherche",home.getResultSearch());*/
        // home.waittime();
     }
 
-    @And("I clicks to the logout button")
+   /* @And("I clicks to the logout button")
     public void logoutapp() {
         home.logoutButton();}
 
@@ -60,7 +61,7 @@ public class homeStep {
         home.saveScreen();
         //home.waittime();
     }
-
+*/
 
         @Then("I see a message {string}")
         public void iSeeAMessage(String result_exc) {
